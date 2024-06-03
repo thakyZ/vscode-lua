@@ -2582,14 +2582,14 @@
                     "type": "string"
                 },
                 "indent_size": {
-                    "default": 4,
+                    "default": "4",
                     "markdownDescription": "This option represents the number of columns for a single indentation, with a default value of 4 and is valid only when indent_style is space\n\nThe effect under various common options is as follows:\n\n```lua\n-- default\nfunction ff() \n    local t = 123\n    local c = 456\nend\n\n-- indent = 2\nfunction ff()\n    local t = 123\n    local c = 456\nend\n\n-- indent = 3\nfunction ff()\n    local t = 123\n    local c = 456\nend\n\n-- indent = 4\nfunction ff()\n    local t = 123\n    local c = 456\nend\n```",
-                    "type": "number"
+                    "type": "string"
                 },
                 "tab_width": {
-                    "default": 4,
+                    "default": "4",
                     "markdownDescription": "This option is valid only when the indent_style is tab The effect of this option is usually editor-related and is not shown here.",
-                    "type": "number"
+                    "type": "string"
                 },
                 "quote_style": {
                     "default": "none",
@@ -2613,29 +2613,29 @@
                     "type": "string"
                 },
                 "continuation_indent": {
-                    "default": 4,
+                    "default": "4",
                     "markdownDescription": "This option indicates the number of subsequent indented columns for long expressions or expressions when expressed in line wraps, and the default value of this option is 4, and 8 is common\n\n```lua\n-- \nlocal fff = function(x,y)\nend\n\nlocal ccc = aa + bbb + ccc /\n    ddd + eee\n\nif aaa == 123 \nor bbb == 456 then\nend\n\n```\nAfter formatting:\n\n```lua\n\n-- = 4\nlocal fff = function(x, y)\nend\nlocal ccc = aa + bbb + ccc /\n    ddd + eee\n\nif aaa == 123\n    or bbb == 456 then\nend\n\n-- = 8\nlocal fff = function(x, y)\nend\nlocal ccc = aa + bbb + ccc /\n        ddd + eee\n\nif aaa == 123\n        or bbb == 456 then\nend\n```",
-                    "type": "number"
+                    "type": "string"
                 },
                 "continuation_indent.before_block": {
-                    "default": 4,
+                    "default": "4",
                     "markdownDescription": "Undocumented.",
-                    "type": "number"
+                    "type": "string"
                 },
                 "continuation_indent.in_expr": {
-                    "default": 4,
+                    "default": "4",
                     "markdownDescription": "Undocumented.",
-                    "type": "number"
+                    "type": "string"
                 },
                 "continuation_indent.in_table": {
-                    "default": 4,
+                    "default": "4",
                     "markdownDescription": "Undocumented.",
-                    "type": "number"
+                    "type": "string"
                 },
                 "max_line_length": {
-                    "default": 120,
+                    "default": "120",
                     "markdownDescription": "This option indicates the maximum line width of each row, and if some breakable structure exceeds the line width, it will break to the next line, the default value is 120",
-                    "type": "number"
+                    "type": "string"
                 },
                 "end_of_line": {
                     "default": "auto",
@@ -2671,39 +2671,39 @@
                     "type": "string"
                 },
                 "detect_end_of_line": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option represents how to handle the separator of the entry at the end of the table, and there are four options: keep/never/always/smart\n\n- Keep means how it was\n- never indicates that the separator for the last item is always removed\n- always indicates that the separator for the last item is always added\n- smart means that if all items in the table are in the same row, the separator for the last item is removed, otherwise the end separator is added",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "insert_final_newline": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option indicates whether to end with a new line",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_around_table_field_list": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option indicates whether to add a space between the field list and the two curly braces of the table for tables with contents, and the default value is true\n\n```lua\nlocal t = {1,2,3}\n```\nAfter formatting:\n\n```lua\n-- true\nlocal t = { 1, 2, 3 }\n-- false\nlocal t = {1, 2, 3}\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_before_attribute": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option indicates whether to add blanks to the attribute syntax of lua 5.4, the default value is true\n\n```lua\nlocal t<const> = 1\n```\n\nAfter formatting:\n\n```lua\n--true\nlocal t <const> = 1\n--false\nlocal t<const> = 1\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_before_function_open_parenthesis": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates whether to add a blank space before parentheses in the definition of the function, and the default value is false",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_before_function_call_open_parenthesis": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates whether to add a blank space before parentheses in the function call, and the default value is false",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_before_closure_open_parenthesis": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates whether to add a blank space before the parentheses in the definition of the closure expression, and the default value is false",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_before_function_call_single_arg": {
                     "default": "always",
@@ -2739,34 +2739,34 @@
                     "type": "string"
                 },
                 "space_before_open_square_bracket": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates whether to add a blank space before the brackets in the index expression, and the default value is false",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_inside_function_call_parentheses": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates whether to maintain a blank space between the argument list and parentheses of the function call expression",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_inside_function_param_list_parentheses": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates whether to maintain a blank space between the parameter list and parentheses of the function definition statement",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_inside_square_brackets": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates whether to add a blank space between brackets and index",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_around_table_append_operator": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option provides special support for a particular usage in Lua, where expressions of the form 't[#t+1]' are recognized as the APP method. Whether spaces are maintained around the '+' sign in this expression, true means no spaces are preserved, false means that the normal setting is the same\n\n```lua\nt[#t+1] = 1\n```\n\nAfter formatting\n```lua\n--true\nt[#t+1] = 1\n--false\nt[#t + 1] = 1\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "ignore_spaces_inside_function_call": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates whether to ignore the formatting of blanks in the argument list of the function call statement",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_before_inline_comment": {
                     "default": "1",
@@ -2775,29 +2775,29 @@
                     "type": "string"
                 },
                 "space_after_comment_dash": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "Undocumented.\nconvert '---' to '--- ' or '--' to '-- '",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_around_math_operator": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option indicates whether the mathematical operator remains blank around and is true by default",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_around_math_operator.exponent": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "Undocumented",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_after_comma": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option indicates whether a blank space is required after the comma and defaults to true",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_after_comma_in_for_statement": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option indicates whether a blank space is required after the comma in the list in the for statement, which defaults to true",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_around_concat_operator": {
                     "default": "true",
@@ -2812,9 +2812,9 @@
                     "type": "string"
                 },
                 "space_around_logical_operator": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "Undocumented",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "space_around_assign_operator": {
                     "default": "true",
@@ -2829,44 +2829,44 @@
                     "type": "string"
                 },
                 "align_call_args": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This parameter indicates whether the call parameter is aligned to the first parameter, and the default value is false\n\n```lua\nhelloWorld(aaa,bbb,ccc,\neee,ddd)\n\n```\nAfter formatting:\n\n```lua\n-- align_call_args = true\nhelloWorld(aaa, bbb, ccc,\n            eee, ddd)\n\n-- align_call_args = false\nhelloWorld(aaa, bbb, ccc,\n    eee, ddd)\n\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "align_function_params": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option indicates whether the parameter list of the function definition statement is aligned to the position of the first parameter, and the option defaults to true\n\n```lua\n\nfunction fffff(aaa,bbb,ccc)\nend\n\nfunction ddddd(eeee,ffff,\n    ggg,hhh)\nend\n```\n\nAfter formatting:\n```lua\n\n-- true\nfunction fffff(aaa, bbb, ccc)\nend\n\nfunction ddddd(eeee, ffff,\n                ggg, hhh)\nend\n\n-- false\nfunction fffff(aaa, bbb, ccc)\nend\n\nfunction ddddd(eeee, ffff,\n    ggg, hhh)\nend\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "align_continuous_assign_statement": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option means that any line of a continuous assignment statement that is separated by more than one space from the left symbol is aligned to the equal sign using the principle of least alignment, and the default value of this option is true\n\n```lua\n\nlocal t  = 123\nlocal cccc = 456\ncccc = 321\n-- this is a comment\neeeeeeeee = 654 -- this is a comment2\n\n-- no continuous\nlocal c =132\n```\n\nAfter formatting:\n\n```lua\n-- true\nlocal t    = 123\nlocal cccc = 456\ncccc       = 321\n-- this is a comment\neeeeeeeee  = 654 -- this is a comment2\n\n-- no continuous\nlocal c = 132\n```\n\n```lua\n-- false\nlocal t = 123\nlocal cccc = 456\ncccc = 321\n-- this is a comment\neeeeeeeee = 654 -- this is a comment2\n\n-- no continuous\nlocal c = 132\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "align_continuous_rect_table_field": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option indicates whether the items in the table are allowed to snap to equal signs, and the rules for alignment are similar to the above option, and the default value of the option is true\n```lua\nlocal t = {\n    aadddd  = 123,\n    bbb =456,\n    ddd =789\n}\n```\n\nFormat:\n\n```lua\n-- true\nlocal t = {\n    aadddd  = 123,\n    bbb     = 456,\n    ddd     = 789\n}\n-- false\nlocal t = {\n    aadddd = 123,\n    bbb = 456,\n    ddd = 789\n}\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "align_continuous_line_space": {
-                    "default": 2,
+                    "default": "2",
                     "markdownDescription": "Undocumented",
-                    "type": "number"
+                    "type": "string"
                 },
                 "align_if_branch": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates whether to align the branches of the if statement, including branches composed of 'and' and 'or', and defaults to false\n\n```lua\nif aa.isDDDD()\nand bb == fwfwfw\nor hi == 123 then\n    print(1313)\nelseif cc == 123\nor dd == 13131 and ddd == 123 then\n    local ccc = 123\nend\n```\n\nAfter formatting:\n```lua\nif     aa.isDDDD()\nand    bb == fwfwfw\nor     hi == 123 then\n    print(1313)\nelseif cc == 123\nor     dd == 13131 and ddd == 123 then\n    local ccc = 123\nend\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "align_array_table": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "This option indicates whether to align contiguous array items in the table, which defaults to true\n\nThe effect of formatting is as follows:\n```lua\nlocal t = {\n    { \"fwfwf\", njqoifjiowiof, 121313 },\n    { \"fwfw\",  fjwofw,        wngjwoigw },\n    { a,       b,             c,        d },\n    { 1,       2,             3 },\n}\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "align_continuous_inline_comment": {
-                    "default": true,
+                    "default": "true",
                     "markdownDescription": "Undocumented",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "align_chain_expr": {
                     "default": "none",
@@ -2879,9 +2879,9 @@
                     "type": "string"
                 },
                 "never_indent_before_if_condition": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates that conditional expressions for if statements do not need to be indented if they span rows.\n\n```lua\nif a\n    and b then\n\nend\n```\nAfter formatting:\n```lua\nif a\nand b then\n\nend\n```",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "line_space_after_if_statement": {
                     "default": "keep",
@@ -2938,24 +2938,24 @@
                     "type": "string"
                 },
                 "break_all_list_when_line_exceed": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option means that when an expression with a list exceeds the row width setting, interrupt all, that is, break to each row, the default value is false, and it is currently only valid for tables",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "auto_collapse_lines": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option means that expressions on the list should not be interrupted after evaluation, they will all collapse to the same row, the default value is false, and it is currently only valid for tables",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "ignore_space_after_colon": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option indicates that formatting of blanks after the colon is ignored",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "remove_call_expression_list_finish_comma": {
-                    "default": false,
+                    "default": "false",
                     "markdownDescription": "This option removes the comma at the end of the invocation expression (this is an extended syntax)",
-                    "type": "boolean"
+                    "type": "string"
                 },
                 "end_statement_with_semicolon": {
                     "default": "keep",
@@ -2967,7 +2967,7 @@
                         "never"
                     ],
                     "markdownDescription": "This option configures how the optional semicolon at the end of a statement should be handled.\n\nThe possible values are:\n\n    keep deactivates this option\n    always every statement should end with semicolon, missing semicolons will be added\n    same_line multiple statements in a single line may be separated by necessary semicolons, but optional semicolons will be removed\n    replace_with_newline no statement should end with semicolon, all semicolons at the end of statements will be removed, lines with multiple statements will be separated into multiple lines",
-                    "type": "boolean"
+                    "type": "string"
                 }
             },
             "scope": "resource",
